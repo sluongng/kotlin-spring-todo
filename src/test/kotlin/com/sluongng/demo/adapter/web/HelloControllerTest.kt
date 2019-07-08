@@ -13,7 +13,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class HelloControllerTest(@Autowired val restTemplate: TestRestTemplate) {
+class HelloControllerTest(@Autowired val restTemplate: TestRestTemplate,
+                          @Autowired val controller: HelloController) {
 
     private val log = KotlinLogging.logger {}
 
@@ -25,6 +26,11 @@ class HelloControllerTest(@Autowired val restTemplate: TestRestTemplate) {
         assertThat(response.statusCode).isEqualTo(HttpStatus.OK)
         assertThat(response.body).isEqualTo("hello world")
 
-        log.info { "Test Done" }
+        log.info { "Test Done with status: ${response.statusCode} and response: ${response.body}" }
+    }
+
+    @Test
+    fun `controller bean setup properly`() {
+        assertThat(controller).isNotNull
     }
 }
