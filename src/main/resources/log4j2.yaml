@@ -1,6 +1,7 @@
 Configuration:
-  properties:
-    property:
+  status: error
+  Properties:
+    Property:
       -
         name: LogDir
         value: "logs"
@@ -34,7 +35,7 @@ Configuration:
           max: 5
 
   Loggers:
-    logger:
+    Logger:
       -
         name: com.sluongng
         level: info

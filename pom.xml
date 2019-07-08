@@ -20,6 +20,7 @@
         <junit5.version>5.5.0</junit5.version>
 
         <!-- logging -->
+        <kotlin-logging.version>1.6.26</kotlin-logging.version>
         <jackson.version>2.9.9</jackson.version>
 
         <!-- testing -->
@@ -49,6 +50,11 @@
         </dependency>
 
         <!-- Logging -->
+        <dependency>
+            <groupId>io.github.microutils</groupId>
+            <artifactId>kotlin-logging</artifactId>
+            <version>${kotlin-logging.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
