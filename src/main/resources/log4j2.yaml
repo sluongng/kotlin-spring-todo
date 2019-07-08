@@ -1,0 +1,48 @@
+Configuration:
+  properties:
+    property:
+      -
+        name: LogDir
+        value: "logs"
+      -
+        name: DefaultPattern
+        value: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+      -
+        name: DefaultFileNamePattern
+        value: "app.log"
+      -
+        name: DefaultRollingFileNamePattern
+        value: "app-%d{MM-dd0yy-HH-mm-ss}-%i.log.gz"
+  Appenders:
+    Console:
+      name: Console
+      PatternLayout:
+        Pattern: ${DefaultPattern}
+    RollingFile:
+      - name: LogToRollingFile
+        fileName: ${LogDir}/${DefaultFileNamePattern}
+        filePattern: ${LogDir}/${DefaultRollingFileNamePattern}
+        PatternLayout:
+          Pattern: ${DefaultPattern}
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 2
+            modulate: true
+          SizeBasedTriggeringPolicy:
+            size: 100MB
+        DefaultRollOverStrategy:
+          max: 5
+
+  Loggers:
+    logger:
+      -
+        name: com.sluongng
+        level: info
+        additivity: false
+        AppenderRef:
+          - ref: Console
+          - ref: LogToRollingFile
+    Root:
+      level: info
+      AppenderRef:
+        - ref: Console
