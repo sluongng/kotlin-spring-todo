@@ -1,5 +1,6 @@
 language: java
+sudo: false
 jdk: openjdk8
 
-script:
-  - ./mvnw clean verify -B
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

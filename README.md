@@ -1,5 +1,7 @@
 # Todo Kotlin
 
+[![Build Status](https://travis-ci.org/sluongng/kotlin-spring-todo.svg?branch=master)](https://travis-ci.org/sluongng/kotlin-spring-todo)
+
 A project to learn about Kotlin server-side usages with Spring Framework
 
 ## Goals
