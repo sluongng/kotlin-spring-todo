@@ -21,7 +21,7 @@
 
         <!-- logging -->
         <kotlin-logging.version>1.6.26</kotlin-logging.version>
-        <jackson.version>2.9.9</jackson.version>
+        <jackson.version>2.10.0.pr1</jackson.version>
 
         <!--deployment-->
         <jib.version>1.4.0</jib.version>
