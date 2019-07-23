@@ -17,14 +17,14 @@
     <properties>
         <java.version>1.8</java.version>
         <kotlin.version>1.3.41</kotlin.version>
-        <junit5.version>5.5.0</junit5.version>
+        <junit5.version>5.5.1</junit5.version>
 
         <!-- logging -->
         <kotlin-logging.version>1.6.26</kotlin-logging.version>
         <jackson.version>2.9.9</jackson.version>
 
         <!--deployment-->
-        <jib.version>1.3.0</jib.version>
+        <jib.version>1.4.0</jib.version>
 
         <!-- testing -->
         <surefire.version>3.0.0-M3</surefire.version>
