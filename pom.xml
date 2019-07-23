@@ -176,6 +176,7 @@
                 </executions>
                 <configuration>
                     <excludes>
+                        <!--ignoring kotlin-logging lambda-->
                         <exclude>**/*$log$*.class</exclude>
                     </excludes>
                 </configuration>
