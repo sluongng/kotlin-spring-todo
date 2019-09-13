@@ -24,7 +24,7 @@
         <jackson.version>2.9.9</jackson.version>
 
         <!--deployment-->
-        <jib.version>1.5.1</jib.version>
+        <jib.version>1.6.0</jib.version>
 
         <!-- testing -->
         <surefire.version>3.0.0-M3</surefire.version>
