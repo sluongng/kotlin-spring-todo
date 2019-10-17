@@ -1,8 +1,15 @@
 language: java
 sudo: false
-jdk: openjdk8
+
+jdk:
+  - openjdk11
+
+cache:
+  directories:
+    - "$HOME/.m2/repository"
 
 script:
+  - cat ${HOME}/.m2/settings.xml
   - ./mvnw verify
 
 after_success:
