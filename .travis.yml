@@ -1,9 +1,19 @@
 language: java
 sudo: false
-jdk: openjdk8
+
+jdk:
+  - openjdk11
+
+cache:
+  directories:
+    - $HOME/.m2/
+
+install:
+  - mvn -s src/test/resources/maven/settings.xml package -DskipTests=true -Dmaven.test.skip=true -Dmaven.javdoc.skip=true -B -V
 
 script:
-  - ./mvnw verify
+  - cat ${HOME}/.m2/settings.xml
+  - mvn -s src/test/resources/maven/settings.xml verify -V
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
