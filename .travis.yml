@@ -13,7 +13,7 @@ install:
 
 script:
   - cat ${HOME}/.m2/settings.xml
-  - ./mvnw verify
+  - mvn -s src/test/resources/maven/settings.xml verify -V
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
