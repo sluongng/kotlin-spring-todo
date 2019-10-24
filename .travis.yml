@@ -9,7 +9,7 @@ cache:
     - $HOME/.m2/
 
 install:
-  -mvn -s src/test/resources/maven/settings.xml package -DskipTests=true -Dmaven.test.skip=true -Dmaven.javdoc.skip=true -B -V
+  - mvn -s src/test/resources/maven/settings.xml package -DskipTests=true -Dmaven.test.skip=true -Dmaven.javdoc.skip=true -B -V
 
 script:
   - cat ${HOME}/.m2/settings.xml
