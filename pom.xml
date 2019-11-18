@@ -20,7 +20,7 @@
         <junit5.version>5.5.2</junit5.version>
 
         <!-- logging -->
-        <kotlin-logging.version>1.7.6</kotlin-logging.version>
+        <kotlin-logging.version>1.7.8</kotlin-logging.version>
         <jackson.version>2.9.9</jackson.version>
 
         <!--deployment-->
