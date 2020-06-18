@@ -27,7 +27,7 @@
         <jib.version>2.4.0</jib.version>
 
         <!-- testing -->
-        <surefire.version>3.0.0-M4</surefire.version>
+        <surefire.version>3.0.0-M5</surefire.version>
         <jacoco.version>0.8.5</jacoco.version>
     </properties>
 
