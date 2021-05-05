@@ -28,7 +28,7 @@
 
         <!-- testing -->
         <surefire.version>3.0.0-M5</surefire.version>
-        <jacoco.version>0.8.5</jacoco.version>
+        <jacoco.version>0.8.7</jacoco.version>
     </properties>
 
     <dependencyManagement>
